@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://48hyaje3ye6j"]
+
+[ext_resource type="Script" uid="uid://durt0hcydngwg" path="res://addons/powerblockgames/PluginManagerDock/powerblock_games_dock.gd" id="1_d2de2"]
+
+[node name="PowerblockGamesDock" type="MarginContainer" unique_id=558738234]
+offset_right = 244.0
+offset_bottom = 154.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+script = ExtResource("1_d2de2")
+
+[node name="PowerblockGamesDock" type="VBoxContainer" parent="." unique_id=2069916604]
+layout_mode = 2
+
+[node name="Login" type="VBoxContainer" parent="PowerblockGamesDock" unique_id=704383880]
+layout_mode = 2
+
+[node name="Email" type="LineEdit" parent="PowerblockGamesDock/Login" unique_id=1397977243]
+layout_mode = 2
+placeholder_text = "Email"
+
+[node name="PasswordHB" type="HBoxContainer" parent="PowerblockGamesDock/Login" unique_id=2111356025]
+layout_mode = 2
+
+[node name="Password" type="LineEdit" parent="PowerblockGamesDock/Login/PasswordHB" unique_id=1736187804]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Password"
+secret = true
+
+[node name="ShowPassword" type="CheckButton" parent="PowerblockGamesDock/Login/PasswordHB" unique_id=720787816]
+layout_mode = 2
+
+[node name="Login" type="Button" parent="PowerblockGamesDock/Login" unique_id=1781751259]
+layout_mode = 2
+text = "Login"
+
+[connection signal="toggled" from="PowerblockGamesDock/Login/PasswordHB/ShowPassword" to="." method="_on_show_password_toggled"]
+[connection signal="pressed" from="PowerblockGamesDock/Login/Login" to="." method="_on_login_pressed"]
