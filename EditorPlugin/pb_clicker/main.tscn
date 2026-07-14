@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://d3hw51eihh54t"]
+
+[ext_resource type="Script" uid="uid://d2ygbwxrbsqnm" path="res://pb_clicker/main.gd" id="1_372yp"]
+[ext_resource type="Script" uid="uid://codgh1g8orin2" path="res://addons/powerblockgames/username_display.gd" id="2_uet72"]
+
+[node name="Main" type="Control" unique_id=1487584805]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_372yp")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1665053600]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1584723, 0.15847233, 0.1584723, 1)
+
+[node name="Button" type="Button" parent="." unique_id=708598955]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.5
+offset_top = -15.5
+offset_right = 74.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Click me for coins!"
+
+[node name="Label" type="Label" parent="." unique_id=2113289507]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Coints: "
+
+[node name="UsernameDisplay" type="RichTextLabel" parent="." unique_id=21641922]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 77.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "SampleUser "
+fit_content = true
+autowrap_mode = 0
+hint_underlined = false
+script = ExtResource("2_uet72")
+metadata/_custom_type_script = "uid://codgh1g8orin2"
+
+[node name="Label2" type="Label" parent="." unique_id=1276736675]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -98.0
+offset_right = -26.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Welcome"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

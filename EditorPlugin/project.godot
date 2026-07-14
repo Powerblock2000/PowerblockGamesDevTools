@@ -16,7 +16,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-NakamaManager="*uid://bel5yb86502m7"
+NakamaManager="*uid://3skgbsge5ibq"
 Nakama="*uid://cqm13mvswsbum"
 
 [display]
