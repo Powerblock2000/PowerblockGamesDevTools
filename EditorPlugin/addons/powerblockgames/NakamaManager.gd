@@ -18,12 +18,12 @@ var server_id : String = ""
 
 func get_nakama_account() -> NakamaAPI.ApiAccount:
 	await get_tree().create_timer(.1).timeout
-	return NakamaAPI.ApiAccount.new()
+	return null
 
 func get_nakama_user() -> NakamaAPI.ApiUser:
 	await get_tree().create_timer(.1).timeout
-	return NakamaAPI.ApiUser.new()
+	return null
 
 func get_avatar_url() -> String:
 	await get_tree().create_timer(.1).timeout
-	return "https://api.dicebear.com/10.x/fun-emoji/png?size=512&eyesVariant=shades&mouthVariant=plain&backgroundColor=%2371cf62"
+	return ""
